@@ -45,5 +45,6 @@ NB:
    a "dataObject" variable for the object (when applicable)
 
 2) API NOT SECURE AS IS:
-   This API is currently provids UNSECURED database access. When operationalizing, be sure to include a security module. It should
-   allow for an APIKey and Password to be passed along with all requests and validated before execution. 
+   This API currently grants UNSECURED database access. When operationalizing this for PROD use, be sure to include 
+   a security module. At a minimum, proper API security should require an APIKey and APIPassword be passed along with 
+   all web service requests and the credentials be validated before execution. 
