@@ -38,11 +38,12 @@ PERK (/upload/index.php):
 Image upload web service. As an added perk, there is an "upload image" web service to aid in iPhone or other app development.
 
 NB:
+
 1) URL STRUCTURE / "GET" REQUEST ACCESS:
    The .htaccess file directs web/GET request traffic via the URL synax specified above. If you POST to the web service, be 
    sure to include an "action" variable for the action (e.g. "deleteUser"), an "id" field (when applicable) for the id, and
    a "dataObject" variable for the object (when applicable)
 
-2) API NOT SECURE AS IS
+2) API NOT SECURE AS IS:
    This API is currently provids UNSECURED database access. When operationalizing, be sure to include a security module. It should
    allow for an APIKey and Password to be passed along with all requests and validated before execution. 
