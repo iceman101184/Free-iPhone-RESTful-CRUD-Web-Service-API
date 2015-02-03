@@ -7,10 +7,9 @@ of index.php expose all the necessary calls (i.e. "actions") you may need (e.g. 
 
 This API also allows for required fields, which is an added perk. This product is provided "as is." If you 
 need any assistance getting it to work for your needs, you may email arts@loudcanvas.com. We offer paid consulting
-and assistance with larger web development efforts. 
+and assistance for larger web development efforts. 
 
 NOTES ON USE:
-
 	EVENTS:
 	$http.get('/events')  Gets all the events
 	$http.get('/events/10')  Get the event with id = 10
@@ -35,5 +34,15 @@ NOTES ON USE:
 	$http.post('/insertInvite', invite);  Insert an event invite, invite obj = {fkEventID: eventID, fldEmail: email}
 
 
-PERK:
+PERK (/upload/index.php):
 Image upload web service. As an added perk, there is an "upload image" web service to aid in iPhone or other app development.
+
+NB:
+1) URL STRUCTURE / "GET" REQUEST ACCESS:
+   The .htaccess file directs web/GET request traffic via the URL synax specified above. If you POST to the web service, be 
+   sure to include an "action" variable for the action (e.g. "deleteUser"), an "id" field (when applicable) for the id, and
+   a "dataObject" variable for the object (when applicable)
+
+2) API NOT SECURE AS IS
+   This API is currently provids UNSECURED database access. When operationalizing, be sure to include a security module. It should
+   allow for an APIKey and Password to be passed along with all requests and validated before execution. 
